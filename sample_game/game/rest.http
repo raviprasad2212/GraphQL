@@ -1,0 +1,14 @@
+@server=localhost:5000
+
+###
+POST http://{{server}}/graphql
+Content-Type: application/json
+X-Request-type: GraphQL
+
+query {
+  website(url: "https://aws.amazon.com/") {
+      title,
+      image,
+      description
+  }
+}
